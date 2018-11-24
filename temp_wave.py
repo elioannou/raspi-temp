@@ -76,9 +76,10 @@ def write_long_str(message,t=0.3,justify_right=False):
         time.sleep(t)
 
 def writeToFile(string, filename):
-    f = open(filename,'a')
-    f.write(string+'\n')
-    f.close
+    pass
+#    f = open(filename,'a')
+#    f.write(string+'\n')
+#    f.close
 
 def calc_average(list):
     sum=0

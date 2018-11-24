@@ -18,7 +18,7 @@ def current_datetime():
 start_datetime = current_datetime()
 start_date = datetime.datetime.now().strftime('%d-%m-%Y')
 directory='logs/'
-filename=directory + 'temps_raw_data_' + start_date
+filename=directory + 'temps_raw_data' #+ start_date
 if os.path.exists(filename):
     ans=raw_input("ERROR: File "+filename+" already exists. Append? [Y/n] \n")
     if ( ans == 'n' or ans == 'no' or ans == 'N' or ans == 'No' ):

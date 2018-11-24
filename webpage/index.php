@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Temperature in third floor </title>
-    <link rel="icon" href="Temperature.ico">
+    <link rel="icon" href="temperature.ico">
     <meta charset="UTF-8">
     <meta name="description" content="Temperatures in third floor">
     <meta name="author" content="ei233">
@@ -67,7 +67,7 @@
 
       <article>
       <?php
-	 $file="temps_raw_data_current";
+	 $file="temps_raw_data";
 	 $file = escapeshellarg($file);
 	 $line = exec('tail -n 1 '.$file);
 	 $splits=explode("\t",$line);

@@ -44,7 +44,7 @@ directory with the date time and temperature value.
 To plot temperatures use the gnuplot script `plot_temp.gp` which will output the
 files in the `webpage` directory.
 
-To access the website online you should make a simlink from the location where
+To access the website online you should make a symbolic link from the location where
 websites are published in your system.  
 e.g. `/var/www/html` in Debian  
 You can also create a cron job to run the gnuplot script and plot the new values
