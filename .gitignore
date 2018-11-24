@@ -1,4 +1,4 @@
-logs/
+logs/*
 tryout*
 
 # Byte-compiled / optimized / DLL files
