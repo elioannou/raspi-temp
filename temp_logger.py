@@ -16,7 +16,7 @@ def current_datetime():
     return datetime.datetime.now().strftime('%d-%m-%Y\t%H:%M:%S')
 
 start_datetime = current_datetime()
-start_date = datetime.datetime.now().strftime('%d-%m-%Y')
+#start_date = datetime.datetime.now().strftime('%d-%m-%Y')
 directory='logs/'
 filename=directory + 'temps_raw_data' #+ start_date
 if os.path.exists(filename):
@@ -39,7 +39,7 @@ try:
             day = today
             
         writeToFile(current_datetime() + "\t" + str(read_temp()),filename)
-        time.sleep(interval)
+        time.sleep(interval-1)
 
 except KeyboardInterrupt:
     print("\nExited after catching ctrl-c")

@@ -12,8 +12,8 @@
     <style>
       div.container {
       width: 100%;
-      border: 1px solid gray;
       font-family: Montserrat;
+      <!-- border: 1px solid gray; -->
       }
 
       header, footer {
@@ -41,10 +41,14 @@
       }
 
       article {
-      margin-left: 100px;
-      border-left: 1px solid gray;
-      padding: 1em;
-      overflow: hidden;
+      margin-left: 10px;
+      <!-- border-left: 1px solid gray; -->
+      padding: 1;
+      <!-- overflow: hidden; -->
+      }
+
+      img.plot {
+      min-width: 800px;
       }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -57,13 +61,13 @@
 	<h3>Temperature in third floor</h3>
       </header>
 
-      <nav>
-	<ul>
-	  <li><a href="#">Home</a></li>
-	  <li><a href="#temps_plot">48h plot</a></li>
-	  <li><a href="#temps_day_comparison">Per day plot</a></li>
-	</ul>
-      </nav>
+      <!-- <nav> -->
+      <!-- 	<ul> -->
+      <!-- 	  <li><a href="#">Home</a></li> -->
+      <!-- 	  <li><a href="#temps_plot">48h plot</a></li> -->
+      <!-- 	  <li><a href="#temps_day_comparison">Per day plot</a></li> -->
+      <!-- 	</ul> -->
+      <!-- </nav> -->
 
       <article>
       <?php
@@ -78,14 +82,14 @@
 	 $diff_min = round((float)$diff/60);
 	 $temp = round((float)$splits[2],1);
 	 ?>
-	<p> The temperature is <strong style="font-size: 300%; vertical-align: middle;"><?=$temp?> <sup>o</sup>C </h1></strong></p>
+	<p> The temperature is <strong style="font-size: 200%; vertical-align: middle;"><?=$temp?> <sup>o</sup>C </h1></strong></p>
 	<p>Last measurement was taken <?=$diff_min?> minutes ago. </p>
 	<div id="temps_plot"></div>
 	<h3>Plot of last 48 hours  <a href="temp_plots/temps.svg"><i class="material-icons">launch</i></a></h3>
-	<img src="temp_plots/temps.svg" width=100%>
+	<img class="plot" src="temp_plots/temps.svg" width=100%>
 	<div id="temps_day_comparison"></div>
 	<h3>Comparison with last two days <a href="temp_plots/temps_day_comparison.svg"><i class="material-icons">launch</i></a></h3>
-	<img src="temp_plots/temps_day_comparison.svg" width=100%>
+	<img class="plot" src="temp_plots/temps_day_comparison.svg" width=100%>
       </article>
 
       <footer>Disclaimer: No effort has been put into checking the

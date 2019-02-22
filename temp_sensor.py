@@ -8,8 +8,8 @@ import glob
 import time
 
 # Load required modules to the kernel
-os.system('modprobe w1-gpio')
-os.system('modprobe w1-therm')
+#os.system('modprobe w1-gpio')
+#os.system('modprobe w1-therm')
 
 # Find the device file
 device_dir = glob.glob('/sys/bus/w1/devices/28*')[0] # use first entry

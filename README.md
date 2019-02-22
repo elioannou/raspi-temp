@@ -41,6 +41,10 @@ used.
 The start logging run `python temp_logger.py`. This creates a file in the logs
 directory with the date time and temperature value.
 
+Alternatively, you can use the script `temp_log.py` which will log a single
+measurement of temperature in the same file as the above logger. It's purpose is
+to be used in a cronjob.
+
 To plot temperatures use the gnuplot script `plot_temp.gp` which will output the
 files in the `webpage` directory.
 
